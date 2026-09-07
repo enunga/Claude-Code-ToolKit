@@ -80,6 +80,7 @@ Over 176 production-ready plugins that extend Claude Code with domain-specific c
 
 | Plugin | Description |
 |--------|-------------|
+| [anchorwatch](https://github.com/anchorwatch-dev/anchorwatch) | Guardrails plugin: PreToolUse hooks deny destructive shell/git/SQL commands (rm -rf on roots, force-push to main, reset --hard, DROP TABLE, curl \| sh), block reads/writes of .env and key files, and scan every write for leaked credentials, returning a reason Claude acts on. 24 rules, per-project config, 121 tests, zero dependencies. MIT |
 | [agento-patronum](https://github.com/emaarco/agento-patronum) | Protects sensitive files, credentials, and shell commands from unintended AI access via Claude Code hooks. Unlike settings.json deny rules, hooks are an enforcement layer you own and can verify. Ships with defaults for .env files, SSH keys, AWS credentials, and kubeconfig. |
 | [skills-janitor](https://github.com/khendzel/skills-janitor) | Audit, deduplicate, check, fix, and track usage of your Claude Code skills. 9 slash commands, zero dependencies |
 | [great_cto](https://github.com/avelikiy/great_cto) | Full SDLC pipeline plugin with 7 agents (tech-lead, senior-dev, qa-engineer, security-officer, devops, l3-support, project-auditor), 12-angle code review, 10 project archetypes, 13 compliance frameworks (SOC2/HIPAA/PCI-DSS/GDPR/ISO 27001), two-gate approval flow. Opus 4.7 advisor escalation, file-based, MIT |
