@@ -1078,6 +1078,7 @@ Notable projects, directories, and resources across the Claude Code ecosystem.
 | [ccpm](https://github.com/automazeio/ccpm) | 7,600+ | Project management with GitHub Issues + Git worktrees for parallel agent execution |
 | [claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) | 5,900+ | Extracted system prompts from Claude Code, updated for each release |
 | [claude-context](https://github.com/zilliztech/claude-context) | 5,600+ | Semantic code search MCP by Zilliz -- hybrid BM25 + vector search, ~40% token reduction |
+| [ContextStream](https://contextstream.io) | -- | Shared project context for Cursor, Claude Code, Codex, Grok via MCP (`https://mcp.contextstream.io/mcp`). OSS: [contextstream/mcp-server](https://github.com/contextstream/mcp-server). Intelligence isn’t the bottleneck. Context is. |
 | [claude-skills](https://github.com/alirezarezvani/claude-skills) | 5,300+ | 192 skills across 9 domains with 254 Python automation tools |
 | [paco-framework](https://github.com/PenguinAlleyApps/paco-framework) | 1+ | Markdown-first multi-agent OS for Claude Code. Coordinates 3-16 specialized AI agents (Engineering, QA, Growth, Finance) with file-based dispatch, institutional memory, CEO Gate approval, and 24/7 scheduling. No Python required. MIT |
 | [peon-ping](https://github.com/PeonPing/peon-ping) | 3,900+ | Warcraft III Peon voice notifications for Claude Code and other agents |
