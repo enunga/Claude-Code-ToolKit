@@ -586,6 +586,7 @@ Thirty-five curated skill modules included in this repo, with access to **400,00
 
 | Skill | Install | What It Teaches |
 |-------|---------|------------------|
+| [i-hate-editing](https://github.com/ranahaani/i-hate-editing) | `git clone https://github.com/ranahaani/i-hate-editing ~/.claude/skills/i-hate-editing` | MIT Claude Code skill: local whisper.cpp + ffmpeg talking-head cuts. Model reads transcript as text and emits a cut list — never watches pixels. Authored by ranahaani. |
 | [deep-dive](https://github.com/kimsb2429/deep-dive-skill) | `git clone https://github.com/kimsb2429/deep-dive-skill && cp -r deep-dive-skill/deep-dive ~/.claude/skills/` | DAG-based deep research — breaks questions into a dependency graph, runs parallel subagents, identifies gaps, writes a sourced report. Single markdown file, no external APIs or MCP servers. |
 | [Reepl - LinkedIn Content Creation](https://github.com/reepl-io/skills) | `npx skillkit@latest install reepl-io/skills` | 18 tools for LinkedIn content management: drafts, publishing, scheduling, voice profiles, contacts, collections, templates, and AI image generation |
 | [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) | `git clone https://github.com/conorbronsdon/avoid-ai-writing ~/.claude/skills/avoid-ai-writing` | AI writing pattern detection and rewriting (21 categories, 43 replacements) |
