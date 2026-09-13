@@ -1016,6 +1016,7 @@ claude-code-toolkit/               850+ files
 | Name | Stars | Description |
 |------|-------|-------------|
 | [ctrl](https://ctrl.bulletproof.sh) | - | Pixel-art office that visualizes AI coding agents (Claude Code, Codex, Gemini) working in real time. Standalone web app + daemon, relay sharing for remote access, multi-agent support |
+| [Agent Session Manager Desktop](https://github.com/izll/agent-session-manager-desktop) | new | Desktop GUI over tmux (psmux on Windows) for Claude Code, Codex, Gemini, Aider, Amazon Q and OpenCode. Several agent and shell tabs per session with per-tab working directories; agents waiting on input raise a header counter you can answer from without switching tabs, with ntfy push to your phone. Dictation, rate-limit rings for Claude/Codex/Gemini, per-hunk diff revert, search across scrollback and every agent's history. Linux/macOS/Windows, MIT. |
 | [Opcode](https://github.com/winfunc/opcode) | 21,000+ | Tauri 2 desktop GUI and toolkit for Claude Code -- create custom agents with visual editor, usage analytics, MCP integration |
 | [CloudCLI](https://github.com/siteboon/claudecodeui) | 8,400+ | Free open-source web/mobile UI for Claude Code, Cursor CLI, and Codex. Responsive design, integrated shell, file explorer, git explorer |
 | [Companion](https://github.com/The-Vibe-Company/companion) | 2,200+ | Web & mobile UI for Claude Code & Codex. Launch parallel sessions, stream responses, approve tools, session recovery |
