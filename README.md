@@ -1206,6 +1206,8 @@ Tutorials, guides, and deep-dives on Claude Code.
 | [awesome-claude-design](https://github.com/rohitg00/awesome-claude-design) | ![Stars](https://img.shields.io/github/stars/rohitg00/awesome-claude-design?style=flat-square&label=) | DESIGN.md files grouped by aesthetic family (editorial, terminal, warm, data-dense, cinematic, playful, glass, brutalist, indie) + remix recipes + prompt packs for Claude Design (Anthropic Labs) |
 | [ai-skill](https://github.com/anomalyco/ai-skill) | - | AI skill discovery and management system - helps users find, evaluate, install and manage agent skills, tools, plugins and extensions |
 | [Awesome AI Startups](https://github.com/nowork-studio/awesome-ai-startups) | new | Curated directory of ~440 indie-built AI products (bootstrapped, pre-seed, angel-funded) across 18 categories — AI agents, coding tools, marketing, audio/voice, image/design, video, and more |
+| [HostDeFi](https://hostdefi.com) | - | Free token-safety scanner API (A+–F grades) for Solana and EVM tokens, callable by agents via hosted MCP and A2A card |
+
 
 ## Contributing
 
