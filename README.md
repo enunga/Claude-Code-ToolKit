@@ -173,6 +173,7 @@ Over 176 production-ready plugins that extend Claude Code with domain-specific c
 | [codetape](https://github.com/888wing/codetape) | The flight recorder for AI coding — auto-records semantic traces and syncs README, CHANGELOG, CLAUDE.md. Zero deps. `npx codetape init` |
 | [doc-forge](plugins/doc-forge/) | Documentation generation, API docs, and README maintenance |
 | [docker-helper](plugins/docker-helper/) | Build optimized Docker images and improve Dockerfile best practices |
+| [docko](https://github.com/4riel/docko) | Local-first workspace and session protocol for parallel agents — persistent writable slots under one root, explicit per-session claims, delegation, and automatic stale-claim recovery. Plugin: `/plugin marketplace add 4riel/docko` |
 | [double-check](plugins/double-check/) | Verify code correctness with systematic second-pass analysis |
 | [e2e-runner](plugins/e2e-runner/) | End-to-end test execution and recording for web applications |
 | [embedding-manager](plugins/embedding-manager/) | Manage vector embeddings and similarity search |
