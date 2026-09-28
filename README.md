@@ -201,6 +201,7 @@ Over 176 production-ready plugins that extend Claude Code with domain-specific c
 | [ios-developer](plugins/ios-developer/) | iOS and Swift development with SwiftUI views and models |
 | [k8s-helper](plugins/k8s-helper/) | Generate Kubernetes manifests and debug pod issues with kubectl |
 | [leapfrog-mcp](https://github.com/anthonybono21-cloud/leapfrog) | Multi-session browser MCP server -- 15 parallel isolated Chromium sessions so multiple Claude Code terminals can browse simultaneously. 37 tools for navigation, extraction, interaction, network interception, and session profiles. 797 tests. Install: `npx -y leapfrog-mcp` |
+| [lexicon](https://github.com/ashlrai/lexicon) | Fixes the names and jargon speech-to-text gets wrong before Claude Code acts on a dictated prompt. |
 | [license-checker](plugins/license-checker/) | License compliance checking and NOTICE file generation |
 | [lighthouse-runner](plugins/lighthouse-runner/) | Run Lighthouse audits and fix performance issues |
 | [lightcms](https://github.com/jonradoff/lightcms) | AI-native CMS with 41 MCP tools for managing websites through natural language — pages, templates, assets, themes, collections, redirects, and more with full content versioning |
