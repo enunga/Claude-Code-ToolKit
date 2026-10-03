@@ -152,6 +152,7 @@ Over 176 production-ready plugins that extend Claude Code with domain-specific c
 | [contract-tester](plugins/contract-tester/) | API contract testing with Pact for microservice compatibility |
 | [cozempic](https://github.com/Ruya-AI/cozempic) | ✨ v1.2.x — Self-updating now, atomic writes, strict session guard, zero false positives on team detection. 13 pruning strategies, Agent Team protection, MCP server, JSONL doctor. Install: `/plugin marketplace add Ruya-AI/cozempic` |
 | [create-worktrees](plugins/create-worktrees/) | Git worktree management for parallel development workflows |
+| [crest-claude-code](https://github.com/zack40x/crest-claude-code) | Answer Claude Code's permission prompts and questions from your MacBook notch with Crest (free). Hands prompts to the Crest app on your Mac, steps aside when Crest is missing or not running, never blocks. Pure POSIX sh, no network. By the maker of Crest |
 | [cron-scheduler](plugins/cron-scheduler/) | Cron job configuration and schedule validation |
 | [css-cleaner](plugins/css-cleaner/) | Find unused CSS and consolidate stylesheets |
 | [cup](https://github.com/krodak/clickup-cli) | ClickUp CLI for AI agents with task management, sprints, and time tracking |
