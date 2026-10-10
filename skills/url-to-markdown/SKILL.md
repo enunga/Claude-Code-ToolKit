@@ -21,7 +21,7 @@ than noisy HTML. The workflow is read-only and preserves the exact source URL.
 ## Request
 
 ```bash
-curl --fail-with-body 'https://md.replynodes.com/https://example.com/'
+curl --fail-with-body --connect-timeout 10 --max-time 30 'https://md.replynodes.com/https://example.com/'
 ```
 
 Request form:
