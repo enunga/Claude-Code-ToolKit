@@ -69,12 +69,14 @@ cp -R "$BUILD/payload/server" "$PLUG/server"   # bootstrap prefers ../../mcp-ser
 ( cd "$BUILD/plugin" && zip -qr "$BUILD/tesla-connector-plugin.zip" tesla-connector )
 
 # --- 3. Prepackaged Agent Skill ------------------------------------------------
+# SKILL.md must sit at the zip root (no wrapping folder) — claude.ai's
+# uploader requires a top-level SKILL.md or .claude-plugin/plugin.json.
 echo "==> Building tesla-connector-skill.zip"
-SKILL="$BUILD/skill/tesla-connector"
+SKILL="$BUILD/skill"
 mkdir -p "$SKILL"
 cp skill/SKILL.md "$SKILL/SKILL.md"
 cp -R "$BUILD/payload/server" "$SKILL/server"
-( cd "$BUILD/skill" && zip -qr "$BUILD/tesla-connector-skill.zip" tesla-connector )
+( cd "$SKILL" && zip -qr "$BUILD/tesla-connector-skill.zip" . )
 
 # --- 4. Minimal connector-only Skill (for claude.ai web upload) ---------------
 echo "==> Building tesla-connector-skill-claudeai.zip"
