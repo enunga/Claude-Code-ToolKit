@@ -209,6 +209,16 @@ def plan_for(args, project, const_docs, created, pdf_dir, pdfs, manifest, state,
             "atlas_version": (state or {}).get("atlas_version", 0)}
 
 
+def run_ignition(project):
+    """Deterministic Project Ignition blueprint. Safe to rerun; never raises."""
+    proc = subprocess.run([sys.executable, str(SCRIPTS_DIR / "ignition.py"), "blueprint", "--project", str(project)],
+                          capture_output=True, text=True)
+    try:
+        return json.loads(proc.stdout)
+    except ValueError:
+        return {"status": "error", "detail": (proc.stderr.strip().splitlines() or [""])[-1]}
+
+
 def main():
     ap = argparse.ArgumentParser(description="Idempotently deploy the NTXP Plans Atlas for a project.")
     ap.add_argument("--project", required=True, help="Project root directory.")
@@ -217,6 +227,8 @@ def main():
     ap.add_argument("--pdf-dir", help="Drawing PDF folder (default: the const-docs folder).")
     ap.add_argument("--company", default="NTXP")
     ap.add_argument("--force", action="store_true", help="Rebuild regardless of state.")
+    ap.add_argument("--ignite", action="store_true",
+                    help="After a build, run the deterministic Project Ignition blueprint (work orders for Astra and Opus).")
     ap.add_argument("--check", action="store_true", help="Report would-rebuild/up-to-date as JSON; no changes.")
     ap.add_argument("--dry-run", action="store_true", help="Print the plan JSON; change nothing.")
     ap.add_argument("--event", default="manual",
@@ -261,17 +273,22 @@ def main():
         write_json(state_path, {"schema": 1, "last_built": (state or {}).get("last_built"),
                                 "event": args.event, "pdf_manifest": {}, "outputs": [],
                                 "atlas_version": version})
-        print(json.dumps({"status": "no_drawings", "atlas": None, "sheets": 0,
-                          "event": args.event, "atlas_version": version,
-                          "note": f"No drawing PDFs found under {pdf_dir} yet - the atlas will build on the next sync that brings plans."},
-                         indent=2))
+        result = {"status": "no_drawings", "atlas": None, "sheets": 0,
+                  "event": args.event, "atlas_version": version,
+                  "note": f"No drawing PDFs found under {pdf_dir} yet - the atlas will build on the next sync that brings plans."}
+        if args.ignite:
+            result["ignition"] = run_ignition(project)   # scope from the RFP can still be blueprinted
+        print(json.dumps(result, indent=2))
         return
 
     if plan["action"] == "up_to_date":
         n = sheet_count(model_dir)
         log(f"Plans Atlas up to date ({n} sheets, no drawing changes)")
-        print(json.dumps({"status": "up_to_date", "atlas": str(atlas_path), "sheets": n,
-                          "event": args.event, "atlas_version": version}, indent=2))
+        result = {"status": "up_to_date", "atlas": str(atlas_path), "sheets": n,
+                  "event": args.event, "atlas_version": version}
+        if args.ignite:
+            result["ignition"] = run_ignition(project)
+        print(json.dumps(result, indent=2))
         return
 
     # ---- rebuild -----------------------------------------------------------
@@ -354,8 +371,11 @@ def main():
     write_json(state_path, {"schema": 1, "last_built": now_iso(), "event": args.event,
                             "pdf_manifest": manifest, "outputs": rel_outputs, "atlas_version": version})
     log(f"Plans Atlas built: {atlas_path} ({n} sheets, version {version})")
-    print(json.dumps({"status": "built", "atlas": str(atlas_path), "sheets": n,
-                      "event": args.event, "atlas_version": version}, indent=2))
+    result = {"status": "built", "atlas": str(atlas_path), "sheets": n,
+              "event": args.event, "atlas_version": version}
+    if args.ignite:
+        result["ignition"] = run_ignition(project)
+    print(json.dumps(result, indent=2))
 
 
 if __name__ == "__main__":
