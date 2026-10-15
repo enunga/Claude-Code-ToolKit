@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "google-hotels": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/huynhtanan/google-hotels-mcp.git@v0.1.2",
+        "google-hotels-mcp"
+      ],
+      "env": {
+        "APIFY_TOKEN": "<YOUR_APIFY_TOKEN>"
+      },
+      "description": "Google Hotels + Vacation Rentals search with per-OTA nightly rates across 10+ booking sites (Booking.com, Expedia, Agoda, Vrbo, Airbnb, Hotels.com, …), a 3-month daily price calendar, and party-size filters. Pinned to v0.1.2 for reproducible installs. Pay-per-use via Apify (bring your own APIFY_TOKEN)."
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "<ABSOLUTE_PATH_TO_TRIP_PROJECT>"
+      ],
+      "description": "Read and write itinerary files, saved hotel searches, and booking confirmations."
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Fetch destination articles, visa requirements, airline pages, and travel advisories."
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "description": "Track traveler preferences, past bookings, loyalty programs, and watched destinations across sessions."
+    }
+  }
+}
