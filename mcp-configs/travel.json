@@ -4,13 +4,13 @@
       "command": "uvx",
       "args": [
         "--from",
-        "git+https://github.com/huynhtanan/google-hotels-mcp.git",
+        "git+https://github.com/huynhtanan/google-hotels-mcp.git@v0.1.0",
         "google-hotels-mcp"
       ],
       "env": {
         "APIFY_TOKEN": "<YOUR_APIFY_TOKEN>"
       },
-      "description": "Google Hotels + Vacation Rentals search with 7-provider OTA price comparison (Booking.com, Expedia, Vrbo, Hotels.com, Agoda, Trip.com, Tripadvisor), 30-day price calendar, rate parity, and party-size filters. Pay-per-use via Apify."
+      "description": "Google Hotels + Vacation Rentals search with 7-provider OTA price comparison (Booking.com, Expedia, Vrbo, Hotels.com, Agoda, Trip.com, Tripadvisor), 30-day price calendar, rate parity, and party-size filters. Pinned to v0.1.0 for reproducible installs. Pay-per-use via Apify."
     },
     "filesystem": {
       "command": "npx",
